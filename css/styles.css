@@ -1,0 +1,166 @@
+/*Selectores por etiquetas*/
+body {
+  font-family: verdana;
+  padding: 10px;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+legend {
+  font-family: georgia;
+  text-decoration-line: underline;
+}
+footer,
+nav {
+  background-color: #2fa8df;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #281ba5;
+  text-align: center;
+  padding: 5px;
+}
+
+#rcorners {
+  border-radius: 25px;
+  border: 2px solid #281ba5;
+  padding: 20px;
+  width: 200px;
+  height: 740px;
+}
+
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #281ba5;
+  padding: 20px;
+  width: 200px;
+  height: 400px;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:invalid:required {
+  background-image: linear-gradient(
+    to right,
+    rgb(245, 235, 236),
+    rgb(206, 246, 206)
+  );
+}
+
+input:valid {
+  border: 2px solid black;
+}
+
+#contenedor-productos {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+p {
+  line-height: 1.8;
+}
+
+.producto {
+  max-width: 20%;
+  padding: 2px;
+  margin-bottom: 30px;
+  box-shadow: 1px 5px 2px 2px rgba(0, 0, 0, 0.3);
+  margin: 1em;
+}
+.precioProducto {
+  font-weight: 700;
+}
+
+h3,
+h2 {
+  color: rgb(75, 179, 248);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+h4 {
+  color: rgb(75, 179, 248);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+hr.new {
+  border-top: 1px solid rgb(75, 179, 248);
+}
+.titulo-venta {
+  width: calc(100% - 150px);
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+#lista-cursos .row {
+  margin-bottom: 20px;
+}
+
+.img-producto {
+  width: 200px;
+  height: 350px;
+}
+
+.img-producto:hover {
+  transform: scale(1.1);
+  transition: all 250ms ease-out;
+}
+
+.boton-agregar {
+  width: 100%;
+  border: 0;
+  background-color: #2fa8df;
+  color: azure;
+  text-transform: uppercase;
+  padding: 10px 0px 10px 0px;
+}
+
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 22px;
+  }
+  .img-producto {
+    width: 120px;
+    height: 240px;
+  }
+}
+
+.agregar-carrito {
+  margin: 10px 0;
+}
+.submenu {
+  position: relative;
+}
+
+.submenu #carrito {
+  display: none;
+}
+.submenu:hover #carrito {
+  display: block;
+  position: absolute;
+  right: 0;
+
+  top: 100%;
+  z-index: 1;
+  background-color: white;
+  padding: 20px;
+  min-height: 400px;
+  min-width: 300px;
+}
+ul {
+  list-style: none;
+}
+.borrar-producto {
+  background-color: red;
+  border-radius: 50%;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}

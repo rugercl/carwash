@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Proyecto Final">
+    <meta name="author" content="Edgardo Palacios">
+    <!--Icono para la página-->   
+    <link rel="icon" href="img/icono.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+      .error{
+        color:red;
+        font-style: italic;
+      }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Reservas</title>
+</head>
+<body>
+  
+  <div class="container-fluid bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark" >
+      <a class="navbar-brand" href="index.html">
+          <img src="img/logo.jpg" alt="LOGO" style="width:150px; height: 100px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html">Quienes Somos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="productos.html">Venta de Productos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="formulario.html">Reserva Hora de Atención</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  </div>
+
+  <main class="container">
+    <div class="row">
+        <div class="col-md-6" id="rcorners">
+          <h4>Reserva de Horas</h4>
+          <hr class="new">
+            <form id="formulario">
+                <!--Nombre y apellido -->
+                <div class="form-group">
+                    <label for="nombre">Ingrese su nombre:</label>
+                    <input name="nombre" type="text" class="form-control" placeholder="Ej. Edgardo" id="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Ingrese su Apellido:</label>
+                    <input name="apellido" type="text" class="form-control" placeholder="Ej. Palacios" id="apellido" required>
+                </div>
+                <div class="form-marca">
+                    <label for="marca">Ingrese Marca Automovil:</label>
+                    <select class="form-control" name="marca" id="marca" >
+                      <option value="">Ej. Chevrolet
+                    </select>
+                </div>
+                <div class="form-modelo">
+                  <label for="modelo">Ingrese Modelo Automovil:</label>
+                  <select class="form-control" name="modelo" id="modelo" >
+                    <option value="">Ej. Camaro
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="email">Ingrese su Email:</label>
+                  <input name="email" type="text" class="form-control" type="text" placeholder="xx@xx.cl" id="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="">Seleccione Servicio:</label>
+                  <select class="form-control" name="tipSer" id="valor">
+                    <option value="5000">Lavado Exterior $5.000 + I.V.A.</option>
+                    <option value="8000">Lavado de Motor $8.000 + I.V.A.</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="fec_ter">Fecha y Hora Reserva</label>
+                  <input class="form-control col-md-5" type="datetime-local" value="2011-08-19T13:45:00" id="fec_res">
+              </div>
+                <div class="form-group" style="margin-top:1rem;">
+                  <!-- <input type="submit" class="btn btn-primary" > -->
+                    <button id="enviar" type="submit" class="btn btn-primary">Enviar</button>
+                  <!-- <input type="reset" class="btn btn-primary" > -->
+                    <button type="reset" class="btn btn-secondary">Limpiar</button>
+                </div>
+                               
+            </form>
+        </div>
+
+        <div class="col-md-6" id="rcorners2">
+            <h4>Reserva Realizada</h4>
+            <hr class="new">
+            <div id="informacionIngresada"></div>
+        </div>
+    </div>
+</main>
+
+    <footer>
+      
+      <div class="footer-5-columns p-5 mt-2">
+          <p>&copy; P&B e Hijos Ltda.</p>
+      </div>
+
+    </footer>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+    <!-- Optional JavaScript -->
+    <script src="/js/valida.js"></script>
+    <script src="/js/marcas.js"></script>
+    <script src="/js/formMarca.js"></script>
+    <script src="/js/modelos.js"></script>
+    <script src="/js/formModelo.js"></script>
+    
+</body>
+</html>
